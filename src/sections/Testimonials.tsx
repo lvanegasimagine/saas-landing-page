@@ -1,4 +1,3 @@
-"use client";
 import avatar1 from "@/assets/avatar-1.png";
 import avatar2 from "@/assets/avatar-2.png";
 import avatar3 from "@/assets/avatar-3.png";
@@ -8,8 +7,8 @@ import avatar6 from "@/assets/avatar-6.png";
 import avatar7 from "@/assets/avatar-7.png";
 import avatar8 from "@/assets/avatar-8.png";
 import avatar9 from "@/assets/avatar-9.png";
+import MotionDiv from "@/components/motion/MotionDiv";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Fragment } from "react";
 
 const testimonials = [
@@ -80,7 +79,7 @@ const TestimonialsColumn = (props: {
 }) => {
   return (
     <div className={props.className}>
-      <motion.div
+      <MotionDiv
         className="flex flex-col gap-6 pb-6"
         animate={{ translateY: "-50%" }}
         transition={{
@@ -116,7 +115,7 @@ const TestimonialsColumn = (props: {
             )}
           </Fragment>
         ))}
-      </motion.div>
+      </MotionDiv>
     </div>
   );
 };

@@ -1,18 +1,13 @@
-"use client";
+'use client'
 import productImage from "@/assets/product-image.png";
 import pyramidImage from "@/assets/pyramid.png";
 import tubeImage from "@/assets/tube.png";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import useAnimationScroll from "@/hooks/useAnimationScroll";
+import MotionImage from "@/components/motion/MotionImage";
 
 export const ProductShowcase = () => {
-  const sectionRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  });
-  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+  const { sectionRef, translateY } = useAnimationScroll();
 
   return (
     <section
@@ -34,7 +29,7 @@ export const ProductShowcase = () => {
         </div>
         <div className="relative">
           <Image src={productImage} alt="Product Image" className="mt-10" />
-          <motion.img
+          <MotionImage
             src={pyramidImage.src}
             alt="Pyramid Image"
             height={262}
@@ -44,7 +39,7 @@ export const ProductShowcase = () => {
               translateY,
             }}
           />
-          <motion.img
+          <MotionImage
             src={tubeImage.src}
             alt="Tube image"
             height={248}

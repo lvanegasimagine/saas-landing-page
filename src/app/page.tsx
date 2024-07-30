@@ -6,10 +6,11 @@ import { Pricing } from "@/sections/Pricing";
 import { Testimonials } from "@/sections/Testimonials";
 import { CallToAction } from "@/sections/CallToAction";
 import { Footer } from "@/sections/Footer";
+import { Fragment } from "react";
 
 export default function Home() {
   return (
-    <>
+    <Fragment>
       <Header />
       <Hero />
       <LogoTicker />
@@ -18,6 +19,6 @@ export default function Home() {
       <Testimonials />
       <CallToAction />
       <Footer />
-    </>
+    </Fragment>
   );
 }

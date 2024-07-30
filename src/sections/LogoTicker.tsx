@@ -1,5 +1,3 @@
-"use client";
-//https://www.youtube.com/watch?v=7hi5zwO75yc
 import acmeLogo from "@/assets/logo-acme.png";
 import quantumLogo from "@/assets/logo-quantum.png";
 import echoLogo from "@/assets/logo-echo.png";
@@ -7,14 +5,14 @@ import celestialLogo from "@/assets/logo-celestial.png";
 import pulseLogo from "@/assets/logo-pulse.png";
 import apexLogo from "@/assets/logo-apex.png";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import MotionDiv from "@/components/motion/MotionDiv";
 
 export const LogoTicker = () => {
   return (
     <section className="bg-white py-8 md:py-12">
       <div className="container">
         <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
-          <motion.div
+          <MotionDiv
             className="flex flex-none gap-14 pr-14"
             animate={{
               translateX: "-50%",
@@ -86,7 +84,7 @@ export const LogoTicker = () => {
               alt="ApexLogo Logo"
               className="logo-ticker-image"
             />
-          </motion.div>
+          </MotionDiv>
         </div>
       </div>
     </section>

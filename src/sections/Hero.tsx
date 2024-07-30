@@ -7,11 +7,11 @@ import useAnimationScroll from "@/hooks/useAnimationScroll";
 import { motion } from "framer-motion";
 
 export const Hero = () => {
-  const { heroRef, translateY } = useAnimationScroll();
+  const { sectionRef, translateY } = useAnimationScroll();
 
   return (
     <section
-      ref={heroRef}
+      ref={sectionRef}
       className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip"
     >
       <HeroContent>
