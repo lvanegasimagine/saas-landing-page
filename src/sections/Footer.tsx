@@ -7,6 +7,7 @@ import SocialPin from "@/assets/social-pin.svg";
 import SocialYoutube from "@/assets/social-youtube.svg";
 
 export const Footer = () => {
+  const fecha = new Date().getFullYear();
   return (
     <footer className="bg-black text-[#BCBCBC] text-sm py-10 text-center">
       <div className="container">
@@ -29,7 +30,7 @@ export const Footer = () => {
           <SocialYoutube />
         </div>
         <p className="mt-6">
-          &copy; 2024 Your Company, Inc. All rights reserved.
+          &copy; {fecha} Your Company, Inc. All rights reserved.
         </p>
       </div>
     </footer>
