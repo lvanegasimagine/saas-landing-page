@@ -10,7 +10,7 @@ import MotionDiv from "@/components/motion/MotionDiv";
 export const LogoTicker = () => {
   return (
     <section className="bg-white py-8 md:py-12">
-      <div className="container">
+      <div className="container mt-8">
         <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
           <MotionDiv
             className="flex flex-none gap-14 pr-14"
